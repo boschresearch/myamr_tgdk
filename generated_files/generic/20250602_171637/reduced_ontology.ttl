@@ -1,0 +1,50 @@
+@prefix ont: <http://example.com/PlantOntology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ont:Line a owl:Class ;
+rdfs:label "Line" ;
+rdfs:comment "A line is a production line within a plant." .
+
+ont:Machine a owl:Class ;
+rdfs:label "Machine" ;
+rdfs:comment "A machine is a device used in a production line." .
+
+ont:Plant a owl:Class ;
+rdfs:label "Plant" ;
+rdfs:comment "A plant is a facility where production takes place." .
+
+ont:PlantOntology a owl:Ontology .
+
+ont:hasLine a owl:ObjectProperty ;
+rdfs:label "has line" ;
+rdfs:comment "A plant has one or more lines." .
+
+ont:hasMachine a owl:ObjectProperty ;
+rdfs:label "has machine" ;
+rdfs:comment "A line has one or more machines." .
+
+ont:lineId a owl:DatatypeProperty ;
+rdfs:label "line ID" ;
+rdfs:comment "A unique identifier for a line." .
+
+ont:lineName a owl:DatatypeProperty ;
+rdfs:label "line name" ;
+rdfs:comment "The name of a line." .
+
+ont:machineID a owl:DatatypeProperty ;
+rdfs:label "machine ID" ;
+rdfs:comment "A unique identifier for a machine." .
+
+ont:manufacturer a owl:DatatypeProperty ;
+rdfs:label "manufacturer" ;
+rdfs:comment "The manufacturer of a machine." .
+
+ont:plantID a owl:DatatypeProperty ;
+rdfs:label "plant ID" ;
+rdfs:comment "A unique identifier for a plant." .
+
+ont:plantName a owl:DatatypeProperty ;
+rdfs:label "plant name" ;
+rdfs:comment "The name of a plant." .
+

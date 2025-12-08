@@ -1,0 +1,2 @@
+Execution;Data;Datasize;Ont reduction;shots;f1;precision;recall;TP;FN;FP
+RML Mapping Generator;generic;full;naive;[few];0.7692307692307693;0.8333333333333334;0.7142857142857143;5;2;1

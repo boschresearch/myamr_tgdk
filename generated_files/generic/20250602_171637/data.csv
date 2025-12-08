@@ -1,0 +1,11 @@
+PlantID,PlantName,LineID,LineName
+1,Plant_A,101,Line_X1
+1,Plant_A,102,Line_X2
+2,Plant_B,103,Line_Y1
+2,Plant_B,104,Line_Y2
+3,Plant_C,105,Line_Z1
+3,Plant_C,106,Line_Z2
+4,Plant_D,107,Line_W1
+4,Plant_D,108,Line_W2
+5,Plant_E,109,Line_V1
+5,Plant_E,110,Line_V2

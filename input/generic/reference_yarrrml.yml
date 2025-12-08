@@ -1,0 +1,24 @@
+prefixes:
+  ont: http://example.com/PlantOntology#
+
+mappings:
+  plant:
+    sources:
+      - [examples/data_sources/csv/generic/data/plant_line_machine.csv]
+    s: ont:plant-$(PlantID)
+    po:
+      - [a, ont:Plant]
+      - [ont:plantID, $(PlantID)]
+      - [ont:plantName, $(PlantName)]
+      - p: ont:hasLine
+        o:
+          - mapping: line
+
+  line:
+    sources:
+      - [examples/data_sources/csv/generic/data/plant_line_machine.csv]
+    s: ont:line-$(LineID)
+    po:
+      - [a, ont:Line]
+      - [ont:lineId, $(LineID)]
+      - [ont:lineName, $(LineName)] 

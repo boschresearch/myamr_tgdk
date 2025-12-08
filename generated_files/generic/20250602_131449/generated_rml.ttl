@@ -1,0 +1,27 @@
+@prefix ont: <http://example.com/PlantOntology#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+
+<file:///C:/Users/wew1be/py_development/MYAM_anonym/#PlantMapping> a rr:TriplesMap ;
+    rml:logicalSource [ rml:referenceFormulation ql:CSV ;
+            rml:source "examples/data_sources/csv/data.csv" ] ;
+    rr:predicateObjectMap [ rr:objectMap [ rml:reference "PlantID" ] ;
+            rr:predicate ont:plantId ],
+        [ rr:objectMap [ rml:reference "PlantName" ] ;
+            rr:predicate ont:plantName ],
+        [ rr:objectMap [ rr:parentTriplesMap <file:///C:/Users/wew1be/py_development/MYAM_anonym/#LineMapping> ] ;
+            rr:predicate ont:hasLine ] ;
+    rr:subjectMap [ rr:class ont:Plant ;
+            rr:template "http://example.com/PlantOntology/{PlantID}" ] .
+
+<file:///C:/Users/wew1be/py_development/MYAM_anonym/#LineMapping> a rr:TriplesMap ;
+    rml:logicalSource [ rml:referenceFormulation ql:CSV ;
+            rml:source "examples/data_sources/csv/data.csv" ] ;
+    rr:predicateObjectMap [ rr:objectMap [ rml:reference "LineID" ] ;
+            rr:predicate ont:lineId ],
+        [ rr:objectMap [ rml:reference "LineName" ] ;
+            rr:predicate ont:lineName ] ;
+    rr:subjectMap [ rr:class ont:Line ;
+            rr:template "http://example.com/PlantOntology/{LineID}" ] .
+

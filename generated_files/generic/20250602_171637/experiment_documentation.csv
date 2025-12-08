@@ -1,0 +1,2 @@
+Execution;Data;Datasize;Ont reduction;shots;f1;precision;recall;TP;FN;FP
+YARRRML Mapping Generator;generic;first20;naive;[few];0.9090909090909091;1.0;0.8333333333333334;5;1;0
